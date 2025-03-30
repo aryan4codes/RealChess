@@ -9,11 +9,11 @@ export const Landing: React.FC = () => {
       <header className="container mx-auto px-4 py-6 flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <FaChessKnight className="text-3xl text-yellow-400" />
-          <span className="text-2xl font-bold">RealChess</span>
+          <span className="text-4xl font-bold">RealChess</span>
         </div>
         <nav className="hidden md:flex space-x-8">
           <a href="#" className="hover:text-yellow-400 transition-colors">Home</a>
-          <a href="#" className="hover:text-yellow-400 transition-colors">Play</a>
+          <a href="/game" className="hover:text-yellow-400 transition-colors">Play</a>
           <a href="#" className="hover:text-yellow-400 transition-colors">Learn</a>
           <a href="#" className="hover:text-yellow-400 transition-colors">Tournaments</a>
         </nav>
@@ -42,11 +42,8 @@ export const Landing: React.FC = () => {
             Play chess online, improve your skills, and compete with players from around the world on RealChess.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <button className="px-8 py-4 rounded-lg bg-yellow-400 text-gray-900 font-bold hover:bg-yellow-500 transition-colors text-lg">
+            <button className="px-8 py-4 rounded-lg bg-yellow-400 text-gray-900 font-bold hover:bg-yellow-500 transition-colors text-lg" onClick={() => window.location.href = '/game'}>
               Play Now
-            </button>
-            <button className="px-8 py-4 rounded-lg border-2 border-white hover:border-yellow-400 hover:text-yellow-400 transition-colors text-lg">
-              Learn Chess
             </button>
           </div>
         </motion.div>
@@ -104,7 +101,7 @@ export const Landing: React.FC = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Join thousands of chess enthusiasts and start your journey to becoming a chess master today.
           </p>
-          <button className="px-8 py-4 rounded-lg bg-gray-900 text-white font-bold hover:bg-gray-800 transition-colors text-lg">
+          <button className="px-8 py-4 rounded-lg bg-gray-900 text-white font-bold hover:bg-gray-800 transition-colors text-lg" onClick={() => window.location.href = '/game'}>
             Start Playing Now
           </button>
         </div>
